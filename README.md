@@ -5,7 +5,6 @@ Tools for DMs of the tabletop RPG game Fading Suns
 
 * Python == 3.8
 * Django == 3.2
-* Django Rest Framework == 3.12
 * Docker
 * Docker-compose
 
