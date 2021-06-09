@@ -1,0 +1,10 @@
+include requirements/*.txt
+include requirements/lib/*.whl
+include README.md
+include MANIFEST.in
+graft fst
+prune tests
+global-exclude __pycache__
+global-eclude *.py[co]
+global-exclude *.sqlite3
+global-exclude *.log

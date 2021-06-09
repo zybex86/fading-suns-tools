@@ -1,0 +1,4 @@
+-r requirements-cov.txt
+-r requirements-tox.txt
+-r requirements-deploy.txt
+ipython>=7.21.0,<7.22.0

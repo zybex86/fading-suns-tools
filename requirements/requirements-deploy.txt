@@ -1,0 +1,2 @@
+fabric3>=1.14.post1,<1.15.post1
+docker-compose>=1.28.6,<1.29.0

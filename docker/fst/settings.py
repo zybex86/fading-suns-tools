@@ -1,0 +1,1 @@
+from fst.settings.base import *

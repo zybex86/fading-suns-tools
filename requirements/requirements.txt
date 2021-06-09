@@ -1,0 +1,8 @@
+gunicorn>=20.1.0,<20.2.0
+psycopg2-binary>=2.8.6,<2.9.0
+
+django>=3.2.4,<3.3.0
+django-filter>=2.4.0,<2.5.0
+djangorestframework>=3.12.4,<3.13.0
+django-docutils>=0.5.1,<0.6.0
+django-cors-headers>=3.7.0,<3.8.0
