@@ -65,7 +65,7 @@ trap "end 1" INT
 if [ -z "$CI" ]
 then
     set +e
-    out=$(docker ps -a -q -f name"$POSTGRES_NAME" 2>&1)
+    out=$(docker ps -a -q -f name="$POSTGRES_NAME" 2>&1)
     code=$?
     set -e
     [ $code != 0 ] && \
@@ -112,4 +112,4 @@ echo_info "Waiting $POSTGRES_TIMEOUT seconds for PostgreSQL."
 "$BASE_DIR"/fst-wait-for-postgresql.py --timeout "$POSTGRES_TIMEOUT" "$POSTGRES_DB" "$POSTGRES_USER" \
             "$POSTGRES_PASSWORD" "$POSTGRES_HOST" "$POSTGRES_PORT"
 echo_info "Running tests against PostgreSQL with coverage."
-"$BASE_DIR"/sts-run-tests.sh "$@"
+"$BASE_DIR"/fst-run-tests.sh "$@"
