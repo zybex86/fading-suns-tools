@@ -57,6 +57,8 @@ INSTALLED_APPS = [
 
     # Internal apps
     f'{MAIN_APP}.{MAIN_APP}',
+    f'{MAIN_APP}.characters',
+    f'{MAIN_APP}.users',
 ]
 
 MIDDLEWARE = [
