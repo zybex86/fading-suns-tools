@@ -34,9 +34,10 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'users.User'
 
 LANGUAGES = [
-    ('pl', _('Polski')),
+    ('en-us', _('English')),
 ]
 # Application definition
 
@@ -57,7 +58,7 @@ INSTALLED_APPS = [
 
     # Internal apps
     f'{MAIN_APP}.{MAIN_APP}',
-    f'{MAIN_APP}.characters',
+    # f'{MAIN_APP}.characters',
     f'{MAIN_APP}.users',
 ]
 

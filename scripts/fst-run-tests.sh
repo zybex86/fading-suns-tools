@@ -16,7 +16,7 @@ BASE_DIR="$(realpath $(dirname $0))"
 
 extra_pytest_args=""
 [ -z "$CI" ] && extra_pytest_args="$extra_pytest_args -vv"
-[ -z "$NO_COVERAGE" ] && extra_pytest_args="$extra_pytest_args --cov=erp"
+[ -z "$NO_COVERAGE" ] && extra_pytest_args="$extra_pytest_args --cov=fst"
 [ -z "$POSTGRES_TESTS" ] && extra_pytest_args="$extra_pytest_args -m \"not postgresql\""
 
 echo_info "Running pytest."
