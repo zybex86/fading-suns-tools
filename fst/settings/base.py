@@ -96,10 +96,11 @@ WSGI_APPLICATION = '.'.join([MAIN_APP, MAIN_APP, 'wsgi.application'])
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': oeg('POSTGRES_HOST', 'fst'),
+        'PORT': oeg('POSTGRES_PORT', '5432'),
+        'HOST': oeg('POSTGRES_HOST', 'localhost'),
         'NAME': oeg('POSTGRES_NAME', 'fst'),
         'USER': oeg('POSTGRES_USER', 'fst'),
-        'PASSWORD': oeg('POSTGRES_PASS', '*******'),
+        'PASSWORD': oeg('POSTGRES_PASS', 'fst'),
     }
 }
 

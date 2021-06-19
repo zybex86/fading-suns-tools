@@ -7,7 +7,7 @@ services:
     environment: &fst-db-env
       POSTGRES_DB: fst
       POSTGRES_USER: fst
-      POSTGRES_PASSWORD: SUperSecretPasswordToChange_on_production-kebab
+      POSTGRES_PASSWORD: fst
 
   app:
     build:
@@ -22,7 +22,8 @@ services:
              fst-manage runserver 0.0.0.0:8000"
     environment:
       <<: *fst-db-env
-      POSTGRES_HOST: fst_db
+      POSTGRES_HOST: "fst_db"
+      POSTGRES_PORT: 5432
       FST_DEBUG: "FALSE"  # This must be a string
       FST_SECRET_KEY: "very__secret__key__to__override__on__production__server"
     depends_on:
