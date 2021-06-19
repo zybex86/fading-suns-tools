@@ -13,7 +13,7 @@ def user_fixture():
     User = get_user_model()
     user = User.objects.create_user(
         username='basic_user',
-        password='test'
+        password='test123'
     )
 
     return user

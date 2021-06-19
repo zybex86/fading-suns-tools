@@ -34,7 +34,6 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = 'users.User'
 
 LANGUAGES = [
     ('en-us', _('English')),
@@ -52,14 +51,11 @@ INSTALLED_APPS = [
     # Third-party apps
     'corsheaders',
     'django_docutils',
-    'django_filters',
-    'rest_framework',
-    'rest_framework.authtoken',
+    'django_filters'
 
     # Internal apps
     f'{MAIN_APP}.{MAIN_APP}',
     # f'{MAIN_APP}.characters',
-    f'{MAIN_APP}.users',
 ]
 
 MIDDLEWARE = [
@@ -99,8 +95,11 @@ WSGI_APPLICATION = '.'.join([MAIN_APP, MAIN_APP, 'wsgi.application'])
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': oeg('POSTGRES_HOST', 'fst'),
+        'NAME': oeg('POSTGRES_NAME', 'fst'),
+        'USER': oeg('POSTGRES_USER', 'fst'),
+        'PASSWORD': oeg('POSTGRES_PASS', '*******'),
     }
 }
 

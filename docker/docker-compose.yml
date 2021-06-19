@@ -1,12 +1,29 @@
 version: "3"
 
 services:
+
+  fst_db:
+    image: postgres:12-alpine
+    environment: &fst-db-env
+      POSTGRES_DB: fst
+      POSTGRES_USER: fst
+      POSTGRES_PASSWORD: SUperSecretPasswordToChange_on_production-kebab
+
   app:
     build:
-      context: .
+      context: ./fst
     ports:
       - "8000:8000"
     volumes:
       - ./fst:/fst
     command: >
-      sh -c "python manage.py runserver 0.0.0.0:8000"
+      sh -c "fst-wait-for-postgresql.py &&
+             fst-manage.py migrate &&
+             fst-manage runserver 0.0.0.0:8000"
+    environment:
+      <<: *fst-db-env
+      POSTGRES_HOST: fst_db
+      FST_DEBUG: "FALSE"  # This must be a string
+      FST_SECRET_KEY: "very__secret__key__to__override__on__production__server"
+    depends_on:
+      - fst_db
