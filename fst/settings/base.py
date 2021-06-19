@@ -51,11 +51,11 @@ INSTALLED_APPS = [
     # Third-party apps
     'corsheaders',
     'django_docutils',
-    'django_filters'
+    'django_filters',
 
     # Internal apps
     f'{MAIN_APP}.{MAIN_APP}',
-    # f'{MAIN_APP}.characters',
+    f'{MAIN_APP}.characters',
 ]
 
 MIDDLEWARE = [
