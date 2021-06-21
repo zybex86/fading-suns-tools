@@ -51,7 +51,7 @@ This app is a universal toolkit for Dungeon Masters to manage character sheets, 
 
 1. Create a container with the PosqtgreSQL database:
 
-        docker run --name fst_postgresql -p 5432:5432 -e POSTGRES_DB=fst, -e POSTGRES_USER=fst -e POSTGRES_PASSWORD=fst -d postgres:13-alpine
+        docker run --name fst_postgresql -p 5432:5432 -e POSTGRES_DB=fst -e POSTGRES_USER=fst -e POSTGRES_PASSWORD=fst -d postgres:13-alpine
 
 1. Make the initial migration:
 
