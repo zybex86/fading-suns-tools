@@ -100,7 +100,7 @@ DATABASES = {
         'HOST': oeg('POSTGRES_HOST', 'localhost'),
         'NAME': oeg('POSTGRES_NAME', 'fst'),
         'USER': oeg('POSTGRES_USER', 'fst'),
-        'PASSWORD': oeg('POSTGRES_PASS', 'fst'),
+        'PASSWORD': oeg('POSTGRES_PASSWORD', 'fst'),
     }
 }
 
