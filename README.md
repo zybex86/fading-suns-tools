@@ -1,3 +1,6 @@
+# The repo was moved
+## As of today, the repo will be private and the app will be officially patroned by Ulisses Spiele International
+
 # Fading Suns Toolkit
 Tools for DMs of the tabletop RPG game Fading Suns
 
